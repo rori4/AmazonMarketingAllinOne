@@ -4,21 +4,32 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 public class Main extends Application {
+
+
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("Main.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("resources/layouts/Main.fxml"));
         primaryStage.setMinWidth(360);
-        primaryStage.setMinHeight(685);
+        primaryStage.setMinHeight(830);
 
+
+
+        Image image = new Image("app/resources/images/icon.png");
+        primaryStage.getIcons().add(image);
 
 //        primaryStage.setMaxWidth(355);
-        primaryStage.setTitle("Hello World");
+        primaryStage.setTitle("Amazon Marketing Suite v1.0");
         primaryStage.setScene(new Scene(root));
         primaryStage.show();
+
+
     }
+
+
 
 
     public static void main(String[] args) {
